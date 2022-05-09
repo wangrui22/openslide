@@ -352,7 +352,7 @@ static bool add_associated_image(openslide_t *osr,
     }
 
     // parse ImageDescription, after newline up to first whitespace -> gives name
-    char **lines = g_strsplit_set(val, "\r\n", -1);
+    char **lines = g_strsplit_set(val, "\r\n|", -1);
     if (!lines) {
       return true;
     }
